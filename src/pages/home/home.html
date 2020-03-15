@@ -1,14 +1,38 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      CS / CM Concierge Snipet Checker.
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <div>
+    <label>
+      <textarea
+        [(ngModel)]="concierge.content" placeholder="ここに書くと反映されます。" rows="10"
+      >
+      </textarea>
+    </label>
+  </div>
+  <div class="talk-wrapper">
+    <div class="user-image">
+      <div class="thumbnail">
+        <div class="thumbnail-image-wrapper">
+          <div class="concierge-account">
+            🐥
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-bubble">
+      <div class="bubble-wrapper">
+        <div class="bubble">
+          <div class="text">
+            <p>{{concierge.content == '' ? 'コンシェルジュだよ！' : concierge.content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

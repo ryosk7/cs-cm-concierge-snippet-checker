@@ -1,3 +1,54 @@
 page-home {
-
+  label {
+    textarea {
+      width: 100%;
+    }
+  }
+  p {
+    white-space: pre-wrap;
+    margin: 0px;
+  }
+  .talk-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 25%;
+    margin: 30px auto 0;
+    .user-image {
+      padding-right: 8px;
+      .thumbnail {
+        width: 32px;
+        height: 32px;
+        flex-wrap: wrap;
+        overflow: hidden;
+        border-radius: 50%;
+        border: solid 1px #e2e2e2;
+        .thumbnail-image-wrapper {
+          height: 100%;
+          width: 100%;
+          .concierge-account {
+            font-size: 20px;
+            text-align: center;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+    .chat-bubble {
+      max-width: 226px;
+      .bubble-wrapper {
+        background-color: #f2f1ee;
+        border-radius: 16px;
+      }
+      .bubble {
+        padding: 8px 12px;
+      }
+      .text {
+        font-size: 14.5px;
+        line-height: 23px;
+        letter-spacing: -.4px;
+        font-weight: 400;
+        color: #484848;
+      }
+    }
+  }
 }
