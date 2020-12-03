@@ -12,7 +12,10 @@ export class HomePage {
     content: ''
   };
 
+  defaultContent: string = ""
+
   constructor(public navCtrl: NavController) {
+    this.defaultContent = "<h3>みなさーーん!!</h3><br><p><b>コンシェルジュだよ！🐥</b></p><br><font color='green'>HTMLタグに対応したよ！</font>"
   }
 
 }
