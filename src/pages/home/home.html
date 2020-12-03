@@ -1,8 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      CS / CM Concierge Snippet Checker.
-    </ion-title>
+    <ion-title> CS / CM Concierge Snippet Checker. </ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,7 +8,9 @@
   <div>
     <label>
       <textarea
-        [(ngModel)]="concierge.content" placeholder="ここに書くと反映されます。" rows="10"
+        [(ngModel)]="concierge.content"
+        placeholder="例: {{defaultContent}} *文字を記入するとデフォルトの文字は消えます。"
+        rows="10"
       >
       </textarea>
     </label>
@@ -19,9 +19,7 @@
     <div class="user-image">
       <div class="thumbnail">
         <div class="thumbnail-image-wrapper">
-          <div class="concierge-account">
-            🐥
-          </div>
+          <div class="concierge-account">🐥</div>
         </div>
       </div>
     </div>
@@ -29,7 +27,9 @@
       <div class="bubble-wrapper">
         <div class="bubble">
           <div class="text">
-            <p>{{concierge.content == '' ? 'コンシェルジュだよ！' : concierge.content}}</p>
+            <p
+              [innerHTML]="concierge.content == '' ? defaultContent : concierge.content | nl2br"
+            ></p>
           </div>
         </div>
       </div>
